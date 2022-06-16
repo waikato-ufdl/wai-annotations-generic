@@ -11,6 +11,8 @@ TODO
 
 ## Examples
 
+The following examples have the test classes linked for guidance on developing your own plugins.
+
 ### Image classification
 
 * Source
