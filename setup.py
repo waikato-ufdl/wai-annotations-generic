@@ -42,6 +42,7 @@ setup(
     entry_points={
         "wai.annotations.plugins": [
             # ISPs
+            "generic-isp-ac=wai.annotations.generic.isp.audio_classification.specifier:AudioClassificationISPSpecifier",
             "generic-isp-ic=wai.annotations.generic.isp.image_classification.specifier:ImageClassificationISPSpecifier",
             "generic-isp-is=wai.annotations.generic.isp.image_segmentation.specifier:ImageSegmentationISPSpecifier",
             "generic-isp-od=wai.annotations.generic.isp.object_detection.specifier:ObjectDetectionISPSpecifier",
