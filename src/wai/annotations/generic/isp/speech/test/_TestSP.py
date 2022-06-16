@@ -12,7 +12,7 @@ OUTPUTS = [
 ]
 
 
-class TestOD(
+class TestSP(
     RequiresNoFinalisation,
     ProcessorComponent[SpeechInstance, SpeechInstance]
 ):

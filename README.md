@@ -89,6 +89,29 @@ TODO
 
 * ISP
   ```bash
+  wai-annotations convert \
+    from-audio-files-sp \
+      -i "/some/where/*.wav" \
+    generic-isp-sp \
+      -c wai.annotations.generic.isp.speech.test.TestSP \
+      -o "--output filename" \
+    to-void-sp
+  ```
+
+* Sink
+  ```bash
+  TODO
+  ```
+
+### Audio classification
+
+* Source
+  ```bash
+  TODO
+  ```
+
+* ISP
+  ```bash
   TODO
   ```
 
