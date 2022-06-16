@@ -2,13 +2,15 @@ from wai.common.cli.options import TypedOption
 from wai.annotations.core.component import ProcessorComponent
 from wai.annotations.core.stream import ThenFunction, DoneFunction
 from wai.annotations.core.stream.util import RequiresNoFinalisation
-from wai.annotations.domain.image import ImageInstance
 from wai.annotations.generic.core import initialize_user_class
+
+
+METHOD_NAME = "process_element"
 
 
 class BaseISP(
     RequiresNoFinalisation,
-    ProcessorComponent[ImageInstance, ImageInstance]
+    ProcessorComponent
 ):
     """
     Base class for generic stream processors.
@@ -28,11 +30,13 @@ class BaseISP(
 
     def process_element(
             self,
-            element: ImageInstance,
-            then: ThenFunction[ImageInstance],
+            element,
+            then: ThenFunction,
             done: DoneFunction
     ):
         if not hasattr(self, "_wrapped"):
             self._wrapped = initialize_user_class(self.user_class, self.user_options, ProcessorComponent)
+            if not hasattr(self._wrapped, METHOD_NAME):
+                raise Exception("Class %s is missing method '%s'!" % (self.user_class, METHOD_NAME))
 
         self._wrapped.process_element(element, then, done)
