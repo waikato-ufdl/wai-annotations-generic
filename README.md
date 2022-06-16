@@ -24,8 +24,8 @@ TODO
     from-images-ic \
       -i "/some/where/*.jpg" \
     generic-isp-ic \
-      -o "--output dimensions" \
       -c wai.annotations.generic.isp.image_classification.test.TestIC \
+      -o "--output dimensions" \
     to-void-ic
   ```
 
@@ -47,8 +47,8 @@ TODO
     from-images-is \
       -i "/some/where/*.jpg" \
     generic-isp-is \
-      -o "--output dimensions" \
       -c wai.annotations.generic.isp.image_segmentation.test.TestIS \
+      -o "--output dimensions" \
     to-void-is
   ```
 
@@ -70,8 +70,8 @@ TODO
     from-images-od \
       -i "/some/where/*.jpg" \
     generic-isp-od \
-      -o "--output dimensions" \
       -c wai.annotations.generic.isp.object_detection.test.TestOD \
+      -o "--output dimensions" \
     to-void-od
   ```
 
