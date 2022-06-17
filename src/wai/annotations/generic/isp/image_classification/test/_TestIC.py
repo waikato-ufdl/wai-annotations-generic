@@ -6,11 +6,11 @@ from wai.annotations.domain.image.classification import ImageClassificationInsta
 
 OUTPUT_FILENAME = "filename"
 OUTPUT_DIMENSIONS = "dimensions"
-OUTPUT_CLASSIFICATION = "classification"
+OUTPUT_LABEL = "label"
 OUTPUTS = [
     OUTPUT_FILENAME,
     OUTPUT_DIMENSIONS,
-    OUTPUT_CLASSIFICATION,
+    OUTPUT_LABEL,
 ]
 
 
@@ -36,7 +36,7 @@ class TestIC(
             self.logger.info(element.data.filename)
         elif self.output == OUTPUT_DIMENSIONS:
             self.logger.info("%d,%d" % (element.data.width, element.data.height))
-        elif self.output == OUTPUT_CLASSIFICATION:
+        elif self.output == OUTPUT_LABEL:
             self.logger.info(element.annotations.label)
         else:
             raise Exception("Unknown output type (%s): %s" % ("|".join(OUTPUTS), self.output))
