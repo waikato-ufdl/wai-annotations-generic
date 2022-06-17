@@ -7,7 +7,7 @@ from wai.annotations.core.specifier import ProcessorStageSpecifier
 
 class AudioClassificationISPSpecifier(ProcessorStageSpecifier):
     """
-    Specifies the generic speech ISP.
+    Specifies the generic audio classification ISP.
     """
     @classmethod
     def description(cls) -> str:
