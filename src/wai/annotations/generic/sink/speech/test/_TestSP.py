@@ -3,10 +3,10 @@ from wai.annotations.core.component import SinkComponent
 from wai.annotations.domain.audio.speech import SpeechInstance
 
 OUTPUT_FILENAME = "filename"
-OUTPUT_LABEL = "label"
+OUTPUT_TRANSCRIPT = "transcript"
 OUTPUTS = [
     OUTPUT_FILENAME,
-    OUTPUT_LABEL,
+    OUTPUT_TRANSCRIPT,
 ]
 
 
@@ -25,7 +25,7 @@ class TestSP(SinkComponent[SpeechInstance]):
         """
         if self.output == OUTPUT_FILENAME:
             self.logger.info(element.data.filename)
-        elif self.output == OUTPUT_LABEL:
+        elif self.output == OUTPUT_TRANSCRIPT:
             self.logger.info(element.annotations.text)
         else:
             raise Exception("Unknown output type (%s): %s" % ("|".join(OUTPUTS), self.output))
