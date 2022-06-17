@@ -13,11 +13,51 @@ TODO
 
 The following examples have the test classes linked for guidance on developing your own plugins.
 
+### Audio classification
+
+* [Source](src/wai/annotations/generic/source/audio_classification/test/_TestAC.py)
+  ```bash
+  wai-annotations convert \
+    generic-source-ac \
+      -c wai.annotations.generic.source.audio_classification.test.TestAC \
+      -o "--dir /some/where/" \  # dir with .wav files
+    generic-sink-ac \
+      -c wai.annotations.generic.sink.audio_classification.test.TestAC \
+      -o "--output label"
+  ```
+
+* [ISP](src/wai/annotations/generic/isp/audio_classification/test/_TestAC.py)
+  ```bash
+  wai-annotations convert \
+    from-audio-files-ac \
+      -i "/some/where/*.wav" \
+    generic-isp-ac \
+      -c wai.annotations.generic.isp.audio_classification.test.TestAC \
+      -o "--output filename" \
+    to-void-ac
+  ```
+
+* [Sink](src/wai/annotations/generic/sink/audio_classification/test/_TestAC.py)
+  ```bash
+  wai-annotations convert \
+    from-audio-files-ac \
+      -i "/some/where/*.wav" \
+    generic-sink-ac \
+      -c wai.annotations.generic.sink.audio_classification.test.TestAC \
+      -o "--output filename"
+  ```
+
 ### Image classification
 
-* Source
+* [Source](src/wai/annotations/generic/source/image_classification/test/_TestIC.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    generic-source-ic \
+      -c wai.annotations.generic.source.image_classification.test.TestIC \
+      -o "--dir /some/where/" \  # dir with .jpg files
+    generic-sink-ic \
+      -c wai.annotations.generic.sink.image_classification.test.TestIC \
+      -o "--output label"
   ```
   
 * [ISP](src/wai/annotations/generic/isp/image_classification/test/_TestIC.py)
@@ -43,9 +83,16 @@ The following examples have the test classes linked for guidance on developing y
 
 ### Image segmentation
 
-* Source
+* [Source](src/wai/annotations/generic/source/image_segmentation/test/_TestIS.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    generic-source-is \
+      -c wai.annotations.generic.source.image_segmentation.test.TestIS \
+      -o "--labels A B C --dir /some/where/" \    # dir with .jpg files
+    generic-sink-is \
+      -c wai.annotations.generic.sink.image_segmentation.test.TestIS \
+      -o "--output dimensions"
+
   ```
 
 * [ISP](src/wai/annotations/generic/isp/image_segmentation/test/_TestIS.py)
@@ -71,9 +118,15 @@ The following examples have the test classes linked for guidance on developing y
 
 ### Object Detection
 
-* Source
+* [Source](src/wai/annotations/generic/source/object_detection/test/_TestOD.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    generic-source-od \
+      -c wai.annotations.generic.source.object_detection.test.TestOD \
+      -o "--dir /some/where/" \   # dir with .jpg files
+    generic-sink-od \
+      -c wai.annotations.generic.sink.object_detection.test.TestOD \
+      -o "--output num_objects"
   ```
 
 * [ISP](src/wai/annotations/generic/isp/object_detection/test/_TestOD.py)
@@ -99,9 +152,15 @@ The following examples have the test classes linked for guidance on developing y
 
 ### Speech
 
-* Source
+* [Source](src/wai/annotations/generic/source/speech/test/_TestSP.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    generic-source-sp \
+      -c wai.annotations.generic.source.speech.test.TestSP \
+      -o "--dir /some/where/" \  # dir with .wav files
+    generic-sink-ac \
+      -c wai.annotations.generic.sink.speech.test.TestSP \
+      -o "--output label"
   ```
 
 * [ISP](src/wai/annotations/generic/isp/speech/test/_TestSP.py)
@@ -122,33 +181,5 @@ The following examples have the test classes linked for guidance on developing y
       -i "/some/where/*.wav" \
     generic-sink-sp \
       -c wai.annotations.generic.sink.speech.test.TestSP \
-      -o "--output filename"
-  ```
-
-### Audio classification
-
-* Source
-  ```bash
-  TODO
-  ```
-
-* [ISP](src/wai/annotations/generic/isp/audio_classification/test/_TestAC.py)
-  ```bash
-  wai-annotations convert \
-    from-audio-files-ac \
-      -i "/some/where/*.wav" \
-    generic-isp-ac \
-      -c wai.annotations.generic.isp.audio_classification.test.TestAC \
-      -o "--output filename" \
-    to-void-ac
-  ```
-
-* [Sink](src/wai/annotations/generic/sink/audio_classification/test/_TestAC.py)
-  ```bash
-  wai-annotations convert \
-    from-audio-files-ac \
-      -i "/some/where/*.wav" \
-    generic-sink-ac \
-      -c wai.annotations.generic.sink.audio_classification.test.TestAC \
       -o "--output filename"
   ```

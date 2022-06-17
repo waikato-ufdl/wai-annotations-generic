@@ -42,6 +42,11 @@ setup(
     entry_points={
         "wai.annotations.plugins": [
             # Sources
+            "generic-source-ac=wai.annotations.generic.source.audio_classification.specifier:AudioClassificationSourceSpecifier",
+            "generic-source-ic=wai.annotations.generic.source.image_classification.specifier:ImageClassificationSourceSpecifier",
+            "generic-source-is=wai.annotations.generic.source.image_segmentation.specifier:ImageSegmentationSourceSpecifier",
+            "generic-source-od=wai.annotations.generic.source.object_detection.specifier:ObjectDetectionSourceSpecifier",
+            "generic-source-sp=wai.annotations.generic.source.speech.specifier:SpeechSourceSpecifier",
             # ISPs
             "generic-isp-ac=wai.annotations.generic.isp.audio_classification.specifier:AudioClassificationISPSpecifier",
             "generic-isp-ic=wai.annotations.generic.isp.image_classification.specifier:ImageClassificationISPSpecifier",
