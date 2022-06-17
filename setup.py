@@ -41,12 +41,19 @@ setup(
     ],
     entry_points={
         "wai.annotations.plugins": [
+            # Sources
             # ISPs
             "generic-isp-ac=wai.annotations.generic.isp.audio_classification.specifier:AudioClassificationISPSpecifier",
             "generic-isp-ic=wai.annotations.generic.isp.image_classification.specifier:ImageClassificationISPSpecifier",
             "generic-isp-is=wai.annotations.generic.isp.image_segmentation.specifier:ImageSegmentationISPSpecifier",
             "generic-isp-od=wai.annotations.generic.isp.object_detection.specifier:ObjectDetectionISPSpecifier",
             "generic-isp-sp=wai.annotations.generic.isp.speech.specifier:SpeechISPSpecifier",
+            # Sinks
+            "generic-sink-ac=wai.annotations.generic.sink.audio_classification.specifier:AudioClassificationSinkSpecifier",
+            "generic-sink-ic=wai.annotations.generic.sink.image_classification.specifier:ImageClassificationSinkSpecifier",
+            "generic-sink-is=wai.annotations.generic.sink.image_segmentation.specifier:ImageSegmentationSinkSpecifier",
+            "generic-sink-od=wai.annotations.generic.sink.object_detection.specifier:ObjectDetectionSinkSpecifier",
+            "generic-sink-sp=wai.annotations.generic.sink.speech.specifier:SpeechSinkSpecifier",
         ]
     }
 )

@@ -31,9 +31,14 @@ The following examples have the test classes linked for guidance on developing y
     to-void-ic
   ```
 
-* Sink
+* [Sink](src/wai/annotations/generic/sink/image_classification/test/_TestIC.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    from-images-ic \
+      -i "/some/where/*.jpg" \
+    generic-sink-ic \
+      -c wai.annotations.generic.sink.image_classification.test.TestIC \
+      -o "--output dimensions"
   ```
 
 ### Image segmentation
@@ -54,9 +59,14 @@ The following examples have the test classes linked for guidance on developing y
     to-void-is
   ```
 
-* Sink
+* [Sink](src/wai/annotations/generic/sink/image_segmentation/test/_TestIS.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    from-images-is \
+      -i "/some/where/*.jpg" \
+    generic-sink-is \
+      -c wai.annotations.generic.sink.image_segmentation.test.TestIS \
+      -o "--output dimensions"
   ```
 
 ### Object Detection
@@ -77,9 +87,14 @@ The following examples have the test classes linked for guidance on developing y
     to-void-od
   ```
 
-* Sink
+* [Sink](src/wai/annotations/generic/sink/object_detection/test/_TestOD.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    from-images-od \
+      -i "/some/where/*.jpg" \
+    generic-sink-od \
+      -c wai.annotations.generic.sink.object_detection.test.TestOD \
+      -o "--output dimensions"
   ```
 
 ### Speech
@@ -100,9 +115,14 @@ The following examples have the test classes linked for guidance on developing y
     to-void-sp
   ```
 
-* Sink
+* [Sink](src/wai/annotations/generic/sink/speech/test/_TestSP.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    from-audio-files-sp \
+      -i "/some/where/*.wav" \
+    generic-sink-sp \
+      -c wai.annotations.generic.sink.speech.test.TestSP \
+      -o "--output filename"
   ```
 
 ### Audio classification
@@ -123,7 +143,12 @@ The following examples have the test classes linked for guidance on developing y
     to-void-ac
   ```
 
-* Sink
+* [Sink](src/wai/annotations/generic/sink/audio_classification/test/_TestAC.py)
   ```bash
-  TODO
+  wai-annotations convert \
+    from-audio-files-ac \
+      -i "/some/where/*.wav" \
+    generic-sink-ac \
+      -c wai.annotations.generic.sink.audio_classification.test.TestAC \
+      -o "--output filename"
   ```
