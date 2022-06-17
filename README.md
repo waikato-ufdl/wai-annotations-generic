@@ -7,7 +7,274 @@ https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/
 
 ## Plugins
 
-TODO
+### GENERIC-SOURCE-AC
+Generic audio classification source.
+
+#### Domain(s):
+- **Audio classification domain**
+
+#### Options:
+```
+usage: generic-source-ac [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SOURCE-IC
+Generic image classification source.
+
+#### Domain(s):
+- **Image Classification Domain**
+
+#### Options:
+```
+usage: generic-source-ic [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SOURCE-IS
+Generic image segmentation source.
+
+#### Domain(s):
+- **Image Segmentation Domain**
+
+#### Options:
+```
+usage: generic-source-is [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+### GENERIC-SOURCE-OD
+Generic object detection source.
+
+#### Domain(s):
+- **Image Object-Detection Domain**
+
+#### Options:
+```
+usage: generic-source-od [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SOURCE-SP
+Generic speech source.
+
+#### Domain(s):
+- **Speech Domain**
+
+#### Options:
+```
+usage: generic-source-sp [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-ISP-AC
+Generic audio classification ISP.
+
+#### Domain(s):
+- **Audio classification domain**
+
+#### Options:
+```
+usage: generic-isp-ac [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-ISP-IC
+Generic image classification ISP.
+
+#### Domain(s):
+- **Image Classification Domain**
+
+#### Options:
+```
+usage: generic-isp-ic [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-ISP-IS
+Generic image segmentation ISP.
+
+#### Domain(s):
+- **Image Segmentation Domain**
+
+#### Options:
+```
+usage: generic-isp-is [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-ISP-OD
+Generic object detection ISP.
+
+#### Domain(s):
+- **Image Object-Detection Domain**
+
+#### Options:
+```
+usage: generic-isp-od [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-ISP-SP
+Generic speech ISP.
+
+#### Domain(s):
+- **Speech Domain**
+
+#### Options:
+```
+usage: generic-isp-sp [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-AC
+Generic audio classification sink.
+
+#### Domain(s):
+- **Audio classification domain**
+
+#### Options:
+```
+usage: generic-sink-ac [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-IC
+Generic image classification sink.
+
+#### Domain(s):
+- **Image Classification Domain**
+
+#### Options:
+```
+usage: generic-sink-ic [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-IS
+Generic image segmentation sink.
+
+#### Domain(s):
+- **Image Segmentation Domain**
+
+#### Options:
+```
+usage: generic-sink-is [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-OD
+Generic object detection sink.
+
+#### Domain(s):
+- **Image Object-Detection Domain**
+
+#### Options:
+```
+usage: generic-sink-od [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-SP
+Generic speech sink.
+
+#### Domain(s):
+- **Speech Domain**
+
+#### Options:
+```
+usage: generic-sink-sp [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
 
 ## Examples
 
