@@ -2,7 +2,7 @@ from wai.common.cli.options import TypedOption
 from wai.annotations.core.component import ProcessorComponent
 from wai.annotations.core.stream import ThenFunction, DoneFunction
 from wai.annotations.core.stream.util import RequiresNoFinalisation
-from wai.annotations.domain.audio.classification import ClassificationInstance
+from wai.annotations.domain.audio.classification import AudioClassificationInstance
 
 OUTPUT_FILENAME = "filename"
 OUTPUT_LABEL = "label"
@@ -14,7 +14,7 @@ OUTPUTS = [
 
 class TestAC(
     RequiresNoFinalisation,
-    ProcessorComponent[ClassificationInstance, ClassificationInstance]
+    ProcessorComponent[AudioClassificationInstance, AudioClassificationInstance]
 ):
 
     output: str = TypedOption(
@@ -26,8 +26,8 @@ class TestAC(
 
     def process_element(
             self,
-            element: ClassificationInstance,
-            then: ThenFunction[ClassificationInstance],
+            element: AudioClassificationInstance,
+            then: ThenFunction[AudioClassificationInstance],
             done: DoneFunction
     ):
         if self.output == OUTPUT_FILENAME:

@@ -18,13 +18,13 @@ class AudioClassificationISPSpecifier(ProcessorStageSpecifier):
             cls,
             input_domain: Type[DomainSpecifier]
     ) -> Type[DomainSpecifier]:
-        from wai.annotations.domain.audio.classification import ClassificationDomainSpecifier
-        if input_domain is ClassificationDomainSpecifier:
+        from wai.annotations.domain.audio.classification import AudioClassificationDomainSpecifier
+        if input_domain is AudioClassificationDomainSpecifier:
             return input_domain
         else:
             raise Exception(
                 f"Generic AC ISP only handles the following domains: "
-                f"{ClassificationDomainSpecifier.name()}"
+                f"{AudioClassificationDomainSpecifier.name()}"
             )
 
     @classmethod
