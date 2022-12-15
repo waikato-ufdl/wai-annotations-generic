@@ -78,6 +78,24 @@ optional arguments:
 ```
 
 
+## GENERIC-SOURCE-SC
+Generic spectrum classification source.
+
+### Domain(s):
+- **Spectrum Classification Domain**
+
+### Options:
+```
+usage: generic-source-sc [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
 ### GENERIC-SOURCE-SP
 Generic speech source.
 
@@ -168,6 +186,24 @@ optional arguments:
 ```
 
 
+### GENERIC-ISP-SC
+Generic spectrum classification ISP.
+
+#### Domain(s):
+- **Spectrum Classification Domain**
+
+#### Options:
+```
+usage: generic-isp-sc [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
 ### GENERIC-ISP-SP
 Generic speech ISP.
 
@@ -249,6 +285,24 @@ Generic object detection sink.
 #### Options:
 ```
 usage: generic-sink-od [-c USER_CLASS] [-o USER_OPTIONS]
+
+optional arguments:
+  -c USER_CLASS, --class USER_CLASS
+                        the user class to wrap (dot notation) (default: None)
+  -o USER_OPTIONS, --options USER_OPTIONS
+                        the options for the user class to parse (default: None)
+```
+
+
+### GENERIC-SINK-SC
+Generic spectrum classification sink.
+
+#### Domain(s):
+- **Spectrum Classification Domain**
+
+#### Options:
+```
+usage: generic-sink-sc [-c USER_CLASS] [-o USER_OPTIONS]
 
 optional arguments:
   -c USER_CLASS, --class USER_CLASS
@@ -415,6 +469,40 @@ The following examples have the test classes linked for guidance on developing y
     generic-sink-od \
       -c wai.annotations.generic.sink.object_detection.test.TestOD \
       -o "--output dimensions"
+  ```
+
+### Spectrum classification
+
+* [Source](src/wai/annotations/generic/source/spectrum_classification/test/_TestSC.py)
+  ```bash
+  wai-annotations convert \
+    generic-source-sc \
+      -c wai.annotations.generic.source.spectrum_classification.test.TestSC \
+      -o "--dir /some/where/" \  # dir with .spec files
+    generic-sink-sc \
+      -c wai.annotations.generic.sink.spectrum_classification.test.TestSC \
+      -o "--output label"
+  ```
+
+* [ISP](src/wai/annotations/generic/isp/spectrum_classification/test/_TestSC.py)
+  ```bash
+  wai-annotations convert \
+    from-spectra-sc \
+      -i "/some/where/*.spec" \
+    generic-isp-sc \
+      -c wai.annotations.generic.isp.spectrum_classification.test.TestSC \
+      -o "--output filename" \
+    to-void-sc
+  ```
+
+* [Sink](src/wai/annotations/generic/sink/spectrum_classification/test/_TestSC.py)
+  ```bash
+  wai-annotations convert \
+    from-spectra-sc \
+      -i "/some/where/*.spec" \
+    generic-sink-sc \
+      -c wai.annotations.generic.sink.spectrum_classification.test.TestSC \
+      -o "--output filename"
   ```
 
 ### Speech

@@ -33,11 +33,11 @@ setup(
         "wai",
         "wai.annotations"
     ],
-    version="1.0.0",
+    version="1.1.0",
     author='Peter Reutemann',
     author_email='fracpete@waikato.ac.nz',
     install_requires=[
-        "wai.annotations.core>=0.1.7"
+        "wai.annotations.core>=0.2.2"
     ],
     entry_points={
         "wai.annotations.plugins": [
@@ -46,18 +46,21 @@ setup(
             "generic-source-ic=wai.annotations.generic.source.image_classification.specifier:ImageClassificationSourceSpecifier",
             "generic-source-is=wai.annotations.generic.source.image_segmentation.specifier:ImageSegmentationSourceSpecifier",
             "generic-source-od=wai.annotations.generic.source.object_detection.specifier:ObjectDetectionSourceSpecifier",
+            "generic-source-sc=wai.annotations.generic.source.spectrum_classification.specifier:SpectrumClassificationSourceSpecifier",
             "generic-source-sp=wai.annotations.generic.source.speech.specifier:SpeechSourceSpecifier",
             # ISPs
             "generic-isp-ac=wai.annotations.generic.isp.audio_classification.specifier:AudioClassificationISPSpecifier",
             "generic-isp-ic=wai.annotations.generic.isp.image_classification.specifier:ImageClassificationISPSpecifier",
             "generic-isp-is=wai.annotations.generic.isp.image_segmentation.specifier:ImageSegmentationISPSpecifier",
             "generic-isp-od=wai.annotations.generic.isp.object_detection.specifier:ObjectDetectionISPSpecifier",
+            "generic-isp-sc=wai.annotations.generic.isp.spectrum_classification.specifier:SpectrumClassificationISPSpecifier",
             "generic-isp-sp=wai.annotations.generic.isp.speech.specifier:SpeechISPSpecifier",
             # Sinks
             "generic-sink-ac=wai.annotations.generic.sink.audio_classification.specifier:AudioClassificationSinkSpecifier",
             "generic-sink-ic=wai.annotations.generic.sink.image_classification.specifier:ImageClassificationSinkSpecifier",
             "generic-sink-is=wai.annotations.generic.sink.image_segmentation.specifier:ImageSegmentationSinkSpecifier",
             "generic-sink-od=wai.annotations.generic.sink.object_detection.specifier:ObjectDetectionSinkSpecifier",
+            "generic-sink-sc=wai.annotations.generic.sink.spectrum_classification.specifier:SpectrumClassificationSinkSpecifier",
             "generic-sink-sp=wai.annotations.generic.sink.speech.specifier:SpeechSinkSpecifier",
         ]
     }
